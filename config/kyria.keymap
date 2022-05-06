@@ -61,6 +61,24 @@
             bindings = <&kp LC(BSPC)>;
             layers = <DEFAULT QWERTY SYM EXT>;
         };
+        combo_1password {
+            timeout-ms = <50>;
+            key-positions = <24 25 26>;
+            bindings = <&kp LA(X)>;
+            layers = <DEFAULT QWERTY SYM EXT>;
+        };
+        combo_audio {
+            timeout-ms = <50>;
+            key-positions = <30 43>;
+            bindings = <&kp LA(A)>;
+            layers = <DEFAULT QWERTY SYM EXT>;
+        };
+        combo_video {
+            timeout-ms = <50>;
+            key-positions = <31 44>;
+            bindings = <&kp LA(V)>;
+            layers = <DEFAULT QWERTY SYM EXT>;
+        };
     };
 
     keymap {
