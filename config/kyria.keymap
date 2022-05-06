@@ -10,10 +10,11 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEFAULT 0
-#define SYM 1
-#define EXT 2
-#define FN 3
-#define PLOVER 4
+#define QWERTY 1
+#define SYM 2
+#define EXT 3
+#define FN 4
+#define PLOVER 5
 
 / {
     keymap {
@@ -21,10 +22,21 @@
 
         default_layer {
             bindings = <
-    &kp TAB   &kp Q       &kp W   &kp F     &kp P     &kp B                                                     &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSLH
-    &mo FN    &kp A       &kp R   &kp S     &kp T     &kp G                                                     &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
-    &kp LCTRL &mt LALT Z  &kp X   &kp C     &kp D     &kp V &rgb_ug RGB_TOG &rgb_ug RGB_HUI &tog PLOVER &none   &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp MINUS
-                                  &kp LGUI  &kp LCTRL &mo EXT   &kp LSHFT &kp BSPC          &kp RET   &kp SPACE &mo SYM   &none     &none
+    &kp TAB   &kp Q       &kp W   &kp F     &kp P     &kp B                                                             &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSLH
+    &mo FN    &kp A       &kp R   &kp S     &kp T     &kp G                                                             &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
+    &kp LCTRL &mt LALT Z  &kp X   &kp C     &kp D     &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &tog QWERTY &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp MINUS
+                                  &kp LGUI  &kp LCTRL &mo EXT &kp LSHFT       &kp BSPC          &kp RET     &kp SPACE   &mo SYM   &none     &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        qwerty_layer {
+            bindings = <
+    &trans    &kp Q     &kp W   &kp E     &kp R     &kp T                                                     &kp Y     &kp U     &kp I     &kp O     &kp P      &trans
+    &trans    &kp A     &kp S   &kp D     &kp F     &kp G                                                     &kp H     &kp J     &kp K     &kp L     &kp SEMI   &trans
+    &trans    &trans    &kp X   &kp C     &kp V     &kp B     &trans    &trans            &trans    &trans    &kp N     &kp M     &trans    &trans    &trans     &trans
+                                &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
