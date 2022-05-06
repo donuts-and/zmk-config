@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <../boards/shields/kyria/boards/nice_nano.overlay>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
 	keymap {
@@ -21,7 +22,7 @@
 			bindings = <
 	&kp ESC   &kp Q &kp W &kp F &kp P &kp B                                                &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSLH
 	&kp TAB   &kp A &kp R &kp S &kp T &kp G                                                &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	&kp LSHFT &kp Z &kp X &kp C &kp D &kp V &rgb_ug RGB_TOG &rgb_ug RGB_HUI        &kp LSHFT &kp LSHFT &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                 &kp LGUI &kp DEL &kp RET &kp LSHFT &kp BSPC       &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
 			>;
 
