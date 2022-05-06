@@ -65,10 +65,10 @@
 
         plover_layer {
             bindings = <
+    &none       &none       &none       &none       &none       &none                                                       &none       &none       &none       &none       &none       &none      
     &kp PLV_X1  &kp PLV_S1  &kp PLV_TL  &kp PLV_PL  &kp PLV_HL  &kp PLV_ST1                                                 &kp PLV_ST3 &kp PLV_FR  &kp PLV_PR  &kp PLV_LR  &kp PLV_TR  &kp PLV_DR
-    &kp PLV_X2  &kp PLV_S2  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST2                                                 &kp PLV_ST4 &kp PLV_RR  &kp PLV_BR  &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
-    &none       &none       &none       &none       &none       &none       &none     &none             &trans    &none     &none       &none       &none       &none       &none       &none 
-                                        &none       &none       &kp PLV_N1  &kp PLV_A &kp PLV_O         &kp PLV_E &kp PLV_U &kp PLV_N2  &none       &none 
+    &kp PLV_X2  &kp PLV_S2  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST2 &none     &none             &trans    &none     &kp PLV_ST4 &kp PLV_RR  &kp PLV_BR  &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
+                                        &none       &kp PLV_N1  &kp PLV_A &kp PLV_O   &none             &none     &kp PLV_E &kp PLV_U   &kp PLV_N2  &none 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
