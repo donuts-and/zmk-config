@@ -55,6 +55,12 @@
             bindings = <&kp LC(V)>;
             layers = <DEFAULT QWERTY SYM EXT>;
         };
+        combo_delete_word {
+            timeout-ms = <50>;
+            key-positions = <18 34>;
+            bindings = <&kp LC(BSPC)>;
+            layers = <DEFAULT QWERTY SYM EXT>;
+        };
     };
 
     keymap {
