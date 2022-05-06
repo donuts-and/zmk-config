@@ -31,9 +31,9 @@
 
         sym_layer {
             bindings = <
-    &trans    &kc EXCL  &kc AT    &kc HASH  &kc DLLR  &kc PRCNT                                                 &kc CARET &kc AMPS  &kc ASTRK &kc MINUS &kc EQUAL &trans
-    &trans    &kc N1    &kc N2    &kc N3    &kc N4    &kc N5                                                    &kc N6    &kc N7    &kc N8    &kc N9    &kc N0    &trans
-    &trans    &kc LBKT  &kc RBKT  &kc LBRC  &kc RBRC  &kc LT    &trans    &trans            &trans    &trans    &kc GT    &kc LPAR  &kc RPAR  &trans    &trans    &trans
+    &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                                                 &kp CARET &kp AMPS  &kp ASTRK &kp MINUS &kp EQUAL &trans
+    &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                                    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
+    &trans    &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &kp LT    &trans    &trans            &trans    &trans    &kp GT    &kp LPAR  &kp RPAR  &trans    &trans    &trans
                                   &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
@@ -42,8 +42,8 @@
 
         ext_layer {
             bindings = <
-    &trans    &kc ESC   &kc ENTER &trans    &trans    &trans                                                    &kc PG_UP &kc HOME  &kc UP    &kc END   &kc DEL   &trans
-    &trans    &kc LALT  &kc LGUI  &kc LSHFT &kc LCTRL &trans                                                    &kc PG_DN &kc LEFT  &kc DOWN  &kc RIGHT &kc BSPC  &trans
+    &trans    &kp ESC   &kp ENTER &trans    &trans    &trans                                                    &kp PG_UP &kp HOME  &kp UP    &kp END   &kp DEL   &trans
+    &trans    &kp LALT  &kp LGUI  &kp LSHFT &kp LCTRL &trans                                                    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp BSPC  &trans
     &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
                                   &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
@@ -54,8 +54,8 @@
         fn_layer {
             bindings = <
     &trans    &trans    &trans    &trans    &trans    &trans                                                    &trans    &trans    &trans    &trans    &trans    &trans
-    &trans    &kc F1    &kc F2    &kc F3    &kc F4    &kc F5                                                    &kc F6    &kc F7    &kc F8    &kc F9    &kc F10   &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &kc LC(F6) &kc LS(F6) &kc F11 &kc F12   &trans    &trans
+    &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                                    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &kp LC(F6) &kp LS(F6) &kp F11 &kp F12   &trans    &trans
                                   &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
