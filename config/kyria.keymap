@@ -12,7 +12,8 @@
 #define DEFAULT 0
 #define SYM 1
 #define EXT 2
-#define FN  3
+#define FN 3
+#define PLOVER 4
 
 / {
     keymap {
@@ -22,7 +23,7 @@
             bindings = <
     &kp TAB   &kp Q       &kp W   &kp F     &kp P     &kp B                                                     &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSLH
     &mo FN    &kp A       &kp R   &kp S     &kp T     &kp G                                                     &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
-    &kp LCTRL &mt LALT Z  &kp X   &kp C     &kp D     &kp V &rgb_ug RGB_TOG &rgb_ug RGB_HUI &kp LSHFT &kp LSHFT &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp MINUS
+    &kp LCTRL &mt LALT Z  &kp X   &kp C     &kp D     &kp V &rgb_ug RGB_TOG &rgb_ug RGB_HUI &tog PLOVER &none   &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp MINUS
                                   &kp LGUI  &kp LCTRL &mo EXT   &kp LSHFT &kp BSPC          &kp RET   &kp SPACE &mo SYM   &none     &none
             >;
 
@@ -57,6 +58,17 @@
     &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                                    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
     &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &kp LC(F6) &kp LS(F6) &kp F11 &kp F12   &trans    &trans
                                   &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        plover_layer {
+            bindings = <
+    &trans    &kp PLV_S1  &kp PLV_TL  &kp PLV_PL  &kp PLV_HL  &kp PLV_ST1                                                 &kp PLV_ST3 &kp PLV_FR  &kp PLV_PR  &kp PLV_LR  &kp PLV_TR  &kp PLV_DR
+    &trans    &kp PLV_S2  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST2                                                 &kp PLV_ST4 &kp PLV_RR  &kp PLV_BR  &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
+    &trans    &trans      &trans      &trans      &trans      &trans      &trans    &trans            &trans    &trans    &trans      &trans      &trans      &trans      &trans      &trans
+                                      &trans      &trans      &kp PLV_A   &kp PLV_O &trans            &trans    &kp PLV_E &kp PLV_U   &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
