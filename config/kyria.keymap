@@ -20,10 +20,10 @@
 
         default_layer {
             bindings = <
-    &kp ESC   &kp Q     &kp W     &kp F     &kp P     &kp B                                                     &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSLH
-    &kp TAB   &kp A     &kp R     &kp S     &kp T     &kp G                                                     &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
-    &kp LSHFT &kp Z     &kp X     &kp C     &kp D     &kp V &rgb_ug RGB_TOG &rgb_ug RGB_HUI &kp LSHFT &kp LSHFT &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp RCTRL
-                                  &kp LGUI  &kp DEL   &kp RET   &kp LSHFT &kp BSPC          &kp RET   &kp SPACE &kp TAB   &kp BSPC  &kp RALT
+    &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B                                                     &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSLH
+    &mo FN    &kp A     &kp R     &kp S     &kp T     &kp G                                                     &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
+    &kp LCTRL &kp Z     &kp X     &kp C     &kp D     &kp V &rgb_ug RGB_TOG &rgb_ug RGB_HUI &kp LSHFT &kp LSHFT &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp MINUS
+                                  &none     &mo SYM   &mo EXT   &kp LSHFT &kp BSPC          &kp RET   &kp SPACE &kp TAB   &kp BSPC  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -31,10 +31,10 @@
 
         sym_layer {
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans                                                    &trans    &trans    &trans    &trans    &trans    &trans    
-    &trans    &trans    &trans    &trans    &trans    &trans                                                    &trans    &trans    &trans    &trans    &trans    &trans    
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    
-                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    
+    &trans    &kc EXCL  &kc AT    &kc HASH  &kc DLLR  &kc PRCNT                                                 &kc CARET &kc AMPS  &kc ASTRK &kc MINUS &kc EQUAL &trans
+    &trans    &kc N1    &kc N2    &kc N3    &kc N4    &kc N5                                                    &kc N6    &kc N7    &kc N8    &kc N9    &kc N0    &trans
+    &trans    &kc LBKT  &kc RBKT  &kc LBRC  &kc RBRC  &kc LT    &trans    &trans            &trans    &trans    &kc GT    &kc LPAR  &kc RPAR  &trans    &trans    &trans
+                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -42,10 +42,10 @@
 
         ext_layer {
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans                                                    &trans    &trans    &trans    &trans    &trans    &trans    
-    &trans    &trans    &trans    &trans    &trans    &trans                                                    &trans    &trans    &trans    &trans    &trans    &trans    
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    
-                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    
+    &trans    &kc ESC   &kc ENTER &trans    &trans    &trans                                                    &kc PG_UP &kc HOME  &kc UP    &kc END   &kc DEL   &trans
+    &trans    &kc LALT  &kc LGUI  &kc LSHFT &kc LCTRL &trans                                                    &kc PG_DN &kc LEFT  &kc DOWN  &kc RIGHT &kc BSPC  &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
+                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -53,10 +53,10 @@
 
         fn_layer {
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans                                            &trans    &trans    &trans    &trans    &trans    &trans    
-    &trans    &trans    &trans    &trans    &trans    &trans                                            &trans    &trans    &trans    &trans    &trans    &trans    
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    
-                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    
+    &trans    &trans    &trans    &trans    &trans    &trans                                                    &trans    &trans    &trans    &trans    &trans    &trans
+    &trans    &kc F1    &kc F2    &kc F3    &kc F4    &kc F5                                                    &kc F6    &kc F7    &kc F8    &kc F9    &kc F0    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &kc LC(F6) &kc LS(F6) &kc F11 &kc F12   &trans    &trans
+                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
