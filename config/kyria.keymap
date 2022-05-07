@@ -10,11 +10,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEFAULT 0
-#define QWERTY 1
-#define SYM 2
-#define EXT 3
-#define FN 4
-#define PLOVER 5
+#define SYM 1
+#define EXT 2
+#define FN 3
+#define PLOVER 4
 
 / {
 // -------------------------------                             -------------------------------
@@ -29,55 +28,63 @@
             timeout-ms = <50>;
             key-positions = <36 37>;
             bindings = <&kp ENTER>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_undo {
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&kp LC(Z)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_cut {
             timeout-ms = <50>;
             key-positions = <26 27>;
             bindings = <&kp LC(X)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_copy {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp LC(C)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_paste {
             timeout-ms = <50>;
             key-positions = <26 27 28>;
             bindings = <&kp LC(V)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_delete_word {
             timeout-ms = <50>;
             key-positions = <18 34>;
             bindings = <&kp LC(BSPC)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_1password {
             timeout-ms = <50>;
             key-positions = <24 25 26>;
             bindings = <&kp LA(X)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_audio {
             timeout-ms = <50>;
             key-positions = <30 43>;
             bindings = <&kp LA(A)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
         };
         combo_video {
             timeout-ms = <50>;
             key-positions = <31 44>;
             bindings = <&kp LA(V)>;
-            layers = <DEFAULT QWERTY SYM EXT>;
+            layers = <DEFAULT SYM EXT>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <SYM EXT>;
+            then-layer = <FN>;
         };
     };
 
@@ -88,19 +95,8 @@
             bindings = <
     &kp TAB   &kp Q       &kp W   &kp F     &kp P     &kp B                                                             &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSLH
     &mo FN    &kp A       &kp R   &kp S     &kp T     &kp G                                                             &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
-    &kp LCTRL &mt LALT Z  &kp X   &kp C     &kp D     &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &tog QWERTY &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp MINUS
-                                  &kp LGUI  &kp LCTRL &mo EXT &sk LSHFT       &kp BSPC          &kp RET     &kp SPACE   &mo SYM   &none     &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        qwerty_layer {
-            bindings = <
-    &trans    &kp Q     &kp W   &kp E     &kp R     &kp T                                                     &kp Y     &kp U     &kp I     &kp O     &kp P      &trans
-    &trans    &kp A     &kp S   &kp D     &kp F     &kp G                                                     &kp H     &kp J     &kp K     &kp L     &kp SEMI   &trans
-    &trans    &trans    &kp X   &kp C     &kp V     &kp B     &trans    &trans            &trans    &trans    &kp N     &kp M     &trans    &trans    &trans     &trans
-                                &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
+    &kp LCTRL &mt LALT Z  &kp X   &kp C     &kp D     &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &none       &kp K     &kp H     &kp COMMA &kp DOT   &kp FSLH  &kp MINUS
+                                  &kp LGUI  &kp LCTRL &mo EXT &sk LSHFT       &kp BSPC          &kp RET     &kp SPACE   &mo SYM   &kp RCTRL &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -122,7 +118,7 @@
     &kp ESC   &kp ESC   &kp ENTER &trans    &trans    &trans                                                    &kp PG_UP &kp HOME  &kp UP    &kp END   &kp DEL   &kp DEL
     &trans    &kp LALT  &kp LGUI  &kp LSHFT &kp LCTRL &trans                                                    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp BSPC  &trans
     &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &kp INS   &trans
-                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
+                                  &trans    &trans    &trans    &trans    &trans            &trans    &kp TAB   &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -143,7 +139,7 @@
             bindings = <
     &none       &none       &none       &none       &none       &none                                                       &none       &none       &none       &none       &none       &none      
     &kp PLV_X1  &kp PLV_S1  &kp PLV_TL  &kp PLV_PL  &kp PLV_HL  &kp PLV_ST1                                                 &kp PLV_ST3 &kp PLV_FR  &kp PLV_PR  &kp PLV_LR  &kp PLV_TR  &kp PLV_DR
-    &kp PLV_X2  &kp PLV_S2  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST2 &none     &none             &trans    &none     &kp PLV_ST4 &kp PLV_RR  &kp PLV_BR  &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
+    &kp PLV_X2  &kp PLV_S2  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST2 &trans    &trans            &trans    &none     &kp PLV_ST4 &kp PLV_RR  &kp PLV_BR  &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
                                         &none       &kp PLV_N1  &kp PLV_A &kp PLV_O   &none             &none     &kp PLV_E &kp PLV_U   &kp PLV_N2  &none 
             >;
 
