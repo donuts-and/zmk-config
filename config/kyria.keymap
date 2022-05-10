@@ -38,6 +38,12 @@
             bindings = <&kp MINUS>;
             layers = <DEFAULT SYM EXT>;
         };
+        combo_underscore {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <35 36>;
+            bindings = <&kp LS(MINUS)>;
+            layers = <DEFAULT SYM EXT>;
+        };
         combo_undo {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
