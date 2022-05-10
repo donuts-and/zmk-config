@@ -15,6 +15,8 @@
 #define FN 3
 #define PLOVER 4
 
+#define COMBO_TIMEOUT 50
+
 / {
 // -------------------------------                             -------------------------------
 // |  0 |  1 |  2 |  3 |  4 |  5 |                             |  6 |  7 |  8 |  9 | 10 | 11 |
@@ -25,61 +27,61 @@
     combos {
         compatible = "zmk,combos";
         combo_enter {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <28 35>;
             bindings = <&kp ENTER>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_double_quote {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <43 44>;
             bindings = <&kp LS(SQT)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_undo {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
             bindings = <&kp LC(Z)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_cut {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <26 27>;
             bindings = <&kp LC(X)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_copy {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <27 28>;
             bindings = <&kp LC(C)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_paste {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <26 27 28>;
             bindings = <&kp LC(V)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_delete_word {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <18 34>;
             bindings = <&kp LC(BSPC)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_1password {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <24 25 26>;
             bindings = <&kp LA(X)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_audio {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <30 43>;
             bindings = <&kp LA(A)>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_video {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <31 44>;
             bindings = <&kp LA(V)>;
             layers = <DEFAULT SYM EXT>;
