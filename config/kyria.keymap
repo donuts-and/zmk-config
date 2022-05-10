@@ -32,12 +32,6 @@
             bindings = <&kp ENTER>;
             layers = <DEFAULT SYM EXT>;
         };
-        combo_double_quote {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <43 44>;
-            bindings = <&kp LS(SQT)>;
-            layers = <DEFAULT SYM EXT>;
-        };
         combo_undo {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
