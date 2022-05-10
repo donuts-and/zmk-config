@@ -32,6 +32,12 @@
             bindings = <&kp ENTER>;
             layers = <DEFAULT SYM EXT>;
         };
+        combo_minus {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <36 37>;
+            bindings = <&kp MINUS>;
+            layers = <DEFAULT SYM EXT>;
+        };
         combo_undo {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
