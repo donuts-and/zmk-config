@@ -28,6 +28,24 @@
                 , <&sk LSHFT>
                 ;
         };
+        qs: question {
+            label = "ZM_question";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LS(SLASH) &kp SPACE>
+                , <&sk LSHFT>
+                ;
+        };
+        sklam: exclamation {
+            label = "ZM_exclamation";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp EXCLAMATION &kp SPACE>
+                , <&sk LSHFT>
+                ;
+        };
     };
 
 // -------------------------------                             -------------------------------
@@ -44,10 +62,16 @@
             bindings = <&kp ENTER>;
             layers = <DEFAULT SYM EXT>;
         };
+        combo_sklam {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <2 3 36 37>;
+            bindings = <&sklam>;
+            layers = <DEFAULT SYM EXT>;
+        };
         combo_question {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <4 7>;
-            bindings = <&kp LS(SLASH)>;
+            bindings = <&qs>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_fullstop {
