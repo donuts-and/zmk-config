@@ -18,6 +18,18 @@
 #define COMBO_TIMEOUT 50
 
 / {
+    macros {
+        fs: fullstop {
+            label = "ZM_fullstop";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp DOT &kp SPACE>
+                , <&sk LSHFT>
+                ;
+        };
+    };
+
 // -------------------------------                             -------------------------------
 // |  0 |  1 |  2 |  3 |  4 |  5 |                             |  6 |  7 |  8 |  9 | 10 | 11 |
 // | 12 | 13 | 14 | 15 | 16 | 17 |----------         ----------| 18 | 19 | 20 | 21 | 22 | 23 |
@@ -30,6 +42,18 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <28 35>;
             bindings = <&kp ENTER>;
+            layers = <DEFAULT SYM EXT>;
+        };
+        combo_question {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <4 7>;
+            bindings = <&kp LS(SLASH)>;
+            layers = <DEFAULT SYM EXT>;
+        };
+        combo_fullstop {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <26 27 36 37>;
+            bindings = <&fs>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_minus {
