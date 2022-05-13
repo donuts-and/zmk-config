@@ -156,7 +156,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -168,9 +168,9 @@
 
         default_layer {
             bindings = <
-    &none &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U           &kp Y        &kp SEMI      &none
-    &none &kp A       &kp R      &kp S       &kp T       &kp G                                                              &kp M     &kp N       &kp E           &kp I        &kp O         &none
-    &none &hm LALT Z  &hm LGUI X &hm LSHFT C &hm LCTRL D &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &hm RCTRL H &hm RSHFT COMMA &hm RGUI DOT &hm RALT FSLH &none
+    &none &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U        &kp Y      &kp SEMI   &none
+    &none &hm LALT A  &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                              &kp M     &hm RCTRL N &hm RSHFT E  &hm RGUI I &hm RALT O &none
+    &none &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &kp DOT    &kp  FSLH  &none
                                  &kp LGUI    &kp LCTRL   &mo EXT &sk LSHFT       &kp BSPC          &kp  SQT    &kp SPACE    &mo SYM   &kp MINUS   &kp BSLH
             >;
 
