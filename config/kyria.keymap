@@ -76,7 +76,7 @@
         };
         combo_fullstop {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <26 27 36 37>;
+            key-positions = <2 3 8 9>;
             bindings = <&fs>;
             layers = <DEFAULT SYM EXT>;
         };
