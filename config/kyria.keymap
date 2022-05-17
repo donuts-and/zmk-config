@@ -192,7 +192,7 @@
             bindings = <
     &kp ESC   &kp ESC   &kp ENTER &trans    &trans    &trans                                                    &kp PG_UP &kp HOME  &kp UP    &kp END   &kp DEL   &kp DEL
     &trans    &kp LALT  &kp LGUI  &kp LSHFT &kp LCTRL &trans                                                    &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &kp BSPC  &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &kp INS   &trans
+    &trans    &trans    &trans    &trans    &kp ENTER &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans    &trans    &kp INS   &trans
                                   &trans    &trans    &trans    &trans    &trans            &trans    &kp TAB   &trans    &trans    &trans
             >;
 
