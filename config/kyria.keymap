@@ -92,6 +92,12 @@
             bindings = <&kp LS(MINUS)>;
             layers = <DEFAULT SYM EXT>;
         };
+        combo_semicolon {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <37 38>;
+            bindings = <&kp SEMICOLON>;
+            layers = <DEFAULT SYM EXT>;
+        };
         combo_undo {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
@@ -114,6 +120,12 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <26 27 28>;
             bindings = <&kp LC(V)>;
+            layers = <DEFAULT SYM EXT>;
+        };
+        combo_backspace {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <8 9>;
+            bindings = <&kp BSPC>;
             layers = <DEFAULT SYM EXT>;
         };
         combo_delete_word {
@@ -168,10 +180,10 @@
 
         default_layer {
             bindings = <
-    &kp TAB &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U        &kp Y      &kp SEMI   &none
+    &kp TAB &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U        &kp Y      &kp SLASH   &none
     &none   &hm LALT A  &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                              &kp M     &hm RCTRL N &hm RSHFT E  &hm RGUI I &hm RALT O &none
-    &none   &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &kp DOT    &kp  FSLH  &none
-                                   &kp LGUI    &kp LCTRL   &mo EXT &sk LSHFT       &kp BSPC          &kp  SQT    &kp SPACE    &mo SYM   &kp MINUS   &kp BSLH
+    &none   &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &kp DOT    &kp SQT    &none
+                                   &kp LGUI    &kp LCTRL   &mo EXT &sk LSHFT       &kp TAB           &kp ENTER   &kp SPACE    &mo SYM   &kp MINUS   &kp BSLH
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
