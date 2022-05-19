@@ -183,7 +183,7 @@
     &kp TAB &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U        &kp Y      &kp SLASH   &none
     &none   &hm LALT A  &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                              &kp M     &hm RCTRL N &hm RSHFT E  &hm RGUI I &hm RALT O &none
     &none   &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &kp DOT    &kp SQT    &none
-                                   &kp LGUI    &kp LCTRL   &mo EXT &sk LSHFT       &kp TAB           &kp ENTER   &kp SPACE    &mo SYM   &kp MINUS   &kp BSLH
+                                   &kp LGUI    &kp LCTRL   &mo EXT &sk LSHFT       &kp TAB           &none       &kp SPACE    &mo SYM   &kp MINUS   &kp BSLH
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
