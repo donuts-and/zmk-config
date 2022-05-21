@@ -162,8 +162,8 @@
         default_layer {
             bindings = <
     &kp TAB &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U        &kp Y      &kp SEMI   &none
-    &none   &hm LALT A  &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                              &kp M     &hm RCTRL N &hm RSHFT E  &hm RGUI I &hm RALT O &none
-    &none   &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &dotques   &kp SQT    &none
+    &none   &hm LALT A  &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                              &kp M     &hm RCTRL N &hm RSHFT E  &hm RGUI I &hm RALT O &kp SQT
+    &none   &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &kp DOT    &kp SLASH  &none
                                    &mo CONFIG  &none       &mo EXT &sk LSHFT       &kp TAB           &none       &kp SPACE    &mo SYM   &kp BSLH    &kp GRAVE
             >;
 
