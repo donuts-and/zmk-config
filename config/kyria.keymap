@@ -146,6 +146,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        dotques: dot_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_QUESTION";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -153,9 +161,9 @@
 
         default_layer {
             bindings = <
-    &kp TAB &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U        &kp Y      &kp SLASH   &none
+    &kp TAB &kp Q       &kp W      &kp F       &kp P       &kp B                                                              &kp J     &kp L       &kp U        &kp Y      &kp SEMI   &none
     &none   &hm LALT A  &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                              &kp M     &hm RCTRL N &hm RSHFT E  &hm RGUI I &hm RALT O &none
-    &none   &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &kp DOT    &kp SQT    &none
+    &none   &kp Z       &kp X      &kp C       &kp D       &kp V   &rgb_ug RGB_TOG &rgb_ug RGB_HUI   &tog PLOVER &kp LC(BSPC) &kp K     &kp H       &kp COMMA    &dotques   &kp SQT    &none
                                    &mo CONFIG  &none       &mo EXT &sk LSHFT       &kp TAB           &none       &kp SPACE    &mo SYM   &kp BSLH    &kp GRAVE
             >;
 
