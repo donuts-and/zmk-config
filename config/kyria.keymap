@@ -125,6 +125,12 @@
             bindings = <&kp LA(V)>;
             layers = <DEFAULT SYM EXT>;
         };
+        combo_plover {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <30 31 32 33>;
+            bindings = <&tog PLOVER>;
+            layers = <DEFAULT PLOVER>;
+        };
     };
 
     conditional_layers {
@@ -161,10 +167,10 @@
 
         default_layer {
             bindings = < 
-    &kp TAB &kp Q      &kp W      &kp F       &kp P       &kp B                                                   &kp J   &kp L       &kp U       &kp Y      &kp SEMI   &none
-    &none   &hm LALT A &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                   &kp M   &hm RCTRL N &hm RSHFT E &hm RGUI I &hm RALT O &kp SQT
-    &none   &kp Z      &kp X      &kp C       &kp D       &kp V   &none     &none           &tog PLOVER &none     &kp K   &kp H       &kp COMMA   &kp DOT    &kp SLASH  &none
-                                  &mo CONFIG  &none       &mo EXT &sk LSHFT &kp TAB         &none       &kp SPACE &mo SYM &kp BSLH    &kp GRAVE
+    &none   &kp Q      &kp W      &kp F       &kp P       &kp B                                                &kp J   &kp L       &kp U       &kp Y      &kp SEMI   &none
+    &none   &hm LALT A &hm LGUI R &hm LSHFT S &hm LCTRL T &kp G                                                &kp M   &hm RCTRL N &hm RSHFT E &hm RGUI I &hm RALT O &none
+    &none   &kp Z      &kp X      &kp C       &kp D       &kp V   &none     &none           &none    &none     &kp K   &kp H       &kp COMMA   &kp DOT    &kp SLASH  &none
+                                  &mo CONFIG  &none       &mo EXT &sk LSHFT &kp TAB         &kp SQT  &kp SPACE &mo SYM &kp BSLH    &kp GRAVE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
