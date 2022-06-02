@@ -192,10 +192,10 @@
 
         sym_layer {
             bindings = <
-    &trans    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                                                 &kp CARET &kp AMPS  &kp ASTRK &kp MINUS &kp EQUAL &trans
-    &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                                    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
-    &trans    &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &kp LT    &trans    &trans            &trans    &trans    &kp GT    &kp LPAR  &kp RPAR  &trans    &trans    &trans
-                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
+    &trans    &kp EXCL    &kp AT      &kp HASH     &kp DLLR     &kp PRCNT                                                 &kp CARET &kp AMPS     &kp ASTRK    &kp MINUS   &kp EQUAL   &trans
+    &trans    &lm LALT N1 &lm LGUI N2 &lm LSHFT N3 &lm LCTRL N4 &kp N5                                                    &kp N6    &rm RCTRL N7 &rm RSHFT N8 &rm RGUI N9 &rm RALT N0 &trans
+    &trans    &kp LBKT    &kp RBKT    &kp LBRC     &kp RBRC     &kp LT    &trans    &trans            &trans    &trans    &kp GT    &kp LPAR     &kp RPAR     &trans      &trans      &trans
+                                      &trans       &trans       &trans    &trans    &trans            &trans    &trans    &trans    &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -214,10 +214,10 @@
 
         fn_layer {
             bindings = <
-    &trans    &trans    &trans    &trans    &trans    &trans                                                    &trans    &trans    &trans    &trans    &trans    &trans
-    &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                                                    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
-    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans            &trans    &trans    &kp LC(F6) &kp LS(F6) &kp F11 &kp F12   &trans    &trans
-                                  &trans    &trans    &trans    &trans    &trans            &trans    &trans    &trans    &trans    &trans
+    &trans    &trans      &trans      &trans       &trans       &trans                                                    &trans    &trans       &trans       &trans      &trans       &trans
+    &trans    &lm LALT F1 &lm LGUI F2 &lm LSHFT F3 &lm LCTRL F4 &kp F5                                                    &kp F6    &rm RCTRL F7 &rm RSHFT F8 &rm RGUI F9 &rm RALT F10 &trans
+    &trans    &trans      &trans      &trans       &trans       &trans    &trans    &trans            &trans    &trans    &trans    &trans       &kp F11      &kp F12     &trans       &trans
+                                      &trans       &trans       &trans    &trans    &trans            &trans    &trans    &trans    &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
