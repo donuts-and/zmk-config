@@ -11,11 +11,12 @@
 #include <../boards/shields/kyria/boards/nice_nano.overlay>
 
 #define DEFAULT 0
-#define SYM 1
-#define EXT 2
-#define FN 3
-#define CONFIG 4
-#define PLOVER 5
+#define CANARY 1
+#define SYM 2
+#define EXT 3
+#define FN 4
+#define CONFIG 5
+#define PLOVER 6
 
 #define COMBO_TIMEOUT 50
 
@@ -183,7 +184,18 @@
             bindings = < 
     &kp GRAVE &kp Q      &kp W      &kp F       &kp P       &kp B                                              &kp J   &kp L       &kp U       &kp Y      &kp SEMI   &kp BSLH
     &none   &lm LALT A &lm LGUI R &lm LSHFT S &lm LCTRL T &kp G                                                &kp M   &rm RCTRL N &rm RSHFT E &rm RGUI I &rm RALT O &none
-    &none   &kp Z      &kp X      &kp C       &kp D       &kp V   &none     &none           &none    &none     &kp K   &kp H       &kp COMMA   &kp DOT    &kp SLASH  &none
+    &none   &kp Z      &kp X      &kp C       &kp D       &kp V   &none     &none        &tog CANARY &none     &kp K   &kp H       &kp COMMA   &kp DOT    &kp SLASH  &none
+                                  &mo CONFIG  &none       &mo EXT &kp LSHFT &kp TAB         &kp SQT  &kp SPACE &mo SYM &none       &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        canary_layer {
+            bindings = < 
+    &kp GRAVE &kp W      &kp L      &kp Y       &kp P       &kp B                                              &kp Z   &kp F       &kp O       &kp U      &kp SQT    &kp BSLH
+    &none   &lm LALT C &lm LGUI R &lm LSHFT S &lm LCTRL T &kp G                                                &kp M   &rm RCTRL N &rm RSHFT E &rm RGUI I &rm RALT A &none
+    &none   &kp Q      &kp J      &kp V       &kp D       &kp K   &none     &none           &trans   &none     &kp X   &kp H       &kp SLASH   &kp COMMA  &kp DOT    &none
                                   &mo CONFIG  &none       &mo EXT &kp LSHFT &kp TAB         &kp SQT  &kp SPACE &mo SYM &none       &none
             >;
 
