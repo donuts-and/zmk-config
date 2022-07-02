@@ -97,18 +97,6 @@
             bindings = <&kp LC(V)>;
             layers = <COMBO_LAYERS>;
         };
-        combo_backspace {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <8 9>;
-            bindings = <&kp BSPC>;
-            layers = <COMBO_LAYERS>;
-        };
-        combo_delete_word {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <18 34>;
-            bindings = <&kp LC(BSPC)>;
-            layers = <COMBO_LAYERS>;
-        };
         combo_1password {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26 27>;
