@@ -19,6 +19,7 @@
 #define PLOVER 6
 
 #define COMBO_TIMEOUT 50
+#define COMBO_LAYERS DEFAULT CANARY SYM EXT
 
 / {
 
@@ -34,97 +35,97 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <28 35>;
             bindings = <&kp ENTER>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_sklam {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <2 3 36 37>;
             bindings = <&kp EXCLAMATION>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_question {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <4 7>;
             bindings = <&kp LS(SLASH)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_fullstop {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <2 3 8 9>;
             bindings = <&kp DOT>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_minus {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <36 37>;
             bindings = <&kp MINUS>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_underscore {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <35 36>;
             bindings = <&kp LS(MINUS)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_semicolon {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <37 38>;
             bindings = <&kp SEMICOLON>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_undo {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
             bindings = <&kp LC(Z)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_cut {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <26 27>;
             bindings = <&kp LC(X)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_copy {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <27 28>;
             bindings = <&kp LC(C)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_paste {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <26 27 28>;
             bindings = <&kp LC(V)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_backspace {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <8 9>;
             bindings = <&kp BSPC>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_delete_word {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <18 34>;
             bindings = <&kp LC(BSPC)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_1password {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26 27>;
             bindings = <&kp LA(X)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_audio {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <30 43>;
             bindings = <&kp LA(A)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_video {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <31 44>;
             bindings = <&kp LA(V)>;
-            layers = <DEFAULT SYM EXT>;
+            layers = <COMBO_LAYERS>;
         };
         combo_plover {
             timeout-ms = <COMBO_TIMEOUT>;
