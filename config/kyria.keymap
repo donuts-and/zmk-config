@@ -171,7 +171,7 @@
 
         canary_layer {
             bindings = < 
-    &kp GRAVE &kp W    &kp L      &kp Y       &kp P       &kp B                                                &kp Z   &kp F       &kp O       &kp U      &kp SQT    &kp BSLH
+    &kp TAB &kp W      &kp L      &kp Y       &kp P       &kp B                                                &kp Z   &kp F       &kp O       &kp U      &kp SQT    &kp BSPC
     &none   &lm LALT C &lm LGUI R &lm LSHFT S &lm LCTRL T &kp G                                                &kp M   &rm RCTRL N &rm RSHFT E &rm RGUI I &rm RALT A &none
     &none   &kp Q      &kp J      &kp V       &kp D       &kp K   &none     &none           &tog DEFAULT &none &kp X   &kp H       &kp SLASH   &kp COMMA  &kp DOT    &none
                                   &mo CONFIG  &none       &mo EXT &kp LSHFT &kp TAB         &kp SEMI &kp SPACE &mo SYM &none       &none
