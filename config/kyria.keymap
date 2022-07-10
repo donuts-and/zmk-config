@@ -172,7 +172,7 @@
         canary_layer {
             bindings = < 
     &kp TAB &kp W      &kp L      &kp Y       &kp P       &kp B                                                &kp Z   &kp F       &kp O       &kp U      &kp SQT    &kp BSPC
-    &none   &lm LALT C &lm LGUI R &lm LSHFT S &lm LCTRL T &kp G                                                &kp M   &rm RCTRL N &rm RSHFT E &rm RGUI I &rm RALT A &none
+    &kp Q   &lm LALT C &lm LGUI R &lm LSHFT S &lm LCTRL T &kp G                                                &kp M   &rm RCTRL N &rm RSHFT E &rm RGUI I &rm RALT A &kp DOT
     &none   &kp Q      &kp J      &kp V       &kp D       &kp K   &none     &none           &tog DEFAULT &none &kp X   &kp H       &kp SLASH   &kp COMMA  &kp DOT    &none
                                   &mo CONFIG  &none       &mo EXT &kp LSHFT &kp TAB         &kp SEMI &kp SPACE &mo SYM &none       &none
             >;
@@ -184,7 +184,7 @@
         default_layer {
             bindings = < 
     &trans  &kp Q      &kp W      &kp F       &kp P       &kp B                                                &kp J   &kp L       &kp U       &kp Y      &kp SEMI   &trans
-    &trans  &lm LALT A &lm LGUI R &lm LSHFT S &lm LCTRL T &kp G                                                &kp M   &rm RCTRL N &rm RSHFT E &rm RGUI I &rm RALT O &trans
+    &kp Z   &lm LALT A &lm LGUI R &lm LSHFT S &lm LCTRL T &kp G                                                &kp M   &rm RCTRL N &rm RSHFT E &rm RGUI I &rm RALT O &kp SLASH
     &trans  &kp Z      &kp X      &kp C       &kp D       &kp V   &trans    &trans          &trans   &trans    &kp K   &kp H       &kp COMMA   &kp DOT    &kp SLASH  &trans
                                   &mo CONFIG  &trans      &mo EXT &kp LSHFT &kp TAB         &kp SQT  &kp SPACE &mo SYM &trans      &trans
             >;
