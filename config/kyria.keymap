@@ -11,15 +11,13 @@
 #include <../boards/shields/kyria/boards/nice_nano.overlay>
 
 #define DEFAULT 0
-#define APT 1
-#define SYM 2
-#define EXT 3
-#define FN 4
-#define CONFIG 5
-#define PLOVER 6
+#define SYM 1
+#define EXT 2
+#define FN 3
+#define PLOVER 4
 
 #define COMBO_TERM 40
-#define COMBO_LAYERS DEFAULT APT SYM EXT
+#define COMBO_LAYERS DEFAULT SYM EXT
 
 #define ZMK_COMBO(name, combo_bindings, keypos, combo_layers) \
     / { \
@@ -77,38 +75,10 @@ ZMK_COMBO(ralt       , &sk RALT        , 48 38       , COMBO_LAYERS  )
         };
     };
 
-    behaviors {
-        hrm: home_row_modifier {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODIFIER";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <30>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
-           // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &trans        &kp F         &kp L         &kp H         &kp V         &kp Z                                                                     &kp SQT       &kp W         &kp U         &kp O         &kp Y         &trans
-           // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &trans        &kp S         &kp R         &kp N         &kp T         &kp K                                                                     &kp C         &kp D         &kp E         &kp A         &kp I         &trans
-           // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┼─────────────┤
-                &trans        &kp X         &kp J         &kp B         &kp M         &kp Q         &trans        &trans            &trans        &trans        &kp P         &kp G         &kp COMMA     &kp DOT       &kp SLASH     &trans
-           // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                          &trans        &mo EXT       &kp LSHIFT    &kp TAB       &trans            &trans        &kp SEMI      &kp SPACE     &mo SYM       &trans
-           //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        apt_layer {
             bindings = <
            // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                 &trans        &kp W         &kp F         &kp G         &kp D         &kp V                                                                     &kp Q         &kp L         &kp U         &kp O         &kp Y         &trans
@@ -117,7 +87,7 @@ ZMK_COMBO(ralt       , &sk RALT        , 48 38       , COMBO_LAYERS  )
            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┼─────────────┤
                 &trans        &kp X         &kp C         &kp M         &kp P         &kp K         &trans        &trans            &trans        &trans        &kp Z         &kp COMMA     &kp DOT       &kp SQT       &kp SLASH     &trans
            // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                          &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans
+                                                          &trans        &trans        &mo EXT       &kp LSHIFT    &kp TAB           &kp SEMI      &kp SPACE     &mo SYM       &trans        &trans
            //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
@@ -165,7 +135,7 @@ ZMK_COMBO(ralt       , &sk RALT        , 48 38       , COMBO_LAYERS  )
            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┼─────────────┤
                 &trans        &sk LALT      &sk LGUI      &sk LSHFT     &sk LCTRL   &rgb_ug RGB_TOG &bt BT_CLR    &trans            &bt BT_SEL 1  &bt BT_SEL 2  &kp INS       &kp F9        &kp F10       &kp F11       &kp F12       &trans
            // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                          &trans        &trans        &to DEFAULT   &to APT       &trans            &trans        &trans        &trans        &trans        &trans
+                                                          &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans
            //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
