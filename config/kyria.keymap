@@ -11,13 +11,14 @@
 #include <../boards/shields/kyria/boards/nice_nano.overlay>
 
 #define DEFAULT 0
-#define SYM 1
-#define EXT 2
-#define FN 3
-#define PLOVER 4
+#define COLEMAK 1
+#define SYM 2
+#define EXT 3
+#define FN 4
+#define PLOVER 5
 
 #define COMBO_TERM 40
-#define COMBO_LAYERS DEFAULT SYM EXT
+#define COMBO_LAYERS DEFAULT COLEMAK SYM EXT
 
 #define ZMK_COMBO(name, combo_bindings, keypos, combo_layers) \
     / { \
@@ -54,15 +55,15 @@ ZMK_COMBO(audio      , &kp LA(A)       , 30 43       , COMBO_LAYERS  )
 ZMK_COMBO(video      , &kp LA(V)       , 31 44       , COMBO_LAYERS  )
 ZMK_COMBO(plover     , &tog PLOVER     , 30 31 32 33 , DEFAULT PLOVER)
 
-ZMK_COMBO(lalt       , &sk LALT        , 41 25       , COMBO_LAYERS  )
-ZMK_COMBO(lgui       , &sk LGUI        , 41 26       , COMBO_LAYERS  )
-ZMK_COMBO(lshift     , &sk LSHFT       , 41 27       , COMBO_LAYERS  )
-ZMK_COMBO(lctrl      , &sk LCTRL       , 41 28       , COMBO_LAYERS  )
+ZMK_COMBO(lalt       , &sk LALT        , 42 25       , COMBO_LAYERS  )
+ZMK_COMBO(lgui       , &sk LGUI        , 42 26       , COMBO_LAYERS  )
+ZMK_COMBO(lshift     , &sk LSHFT       , 42 27       , COMBO_LAYERS  )
+ZMK_COMBO(lctrl      , &sk LCTRL       , 42 28       , COMBO_LAYERS  )
 
-ZMK_COMBO(rctrl      , &sk RCTRL       , 48 35       , COMBO_LAYERS  )
-ZMK_COMBO(rshift     , &sk RSHFT       , 48 36       , COMBO_LAYERS  )
-ZMK_COMBO(rgui       , &sk RGUI        , 48 37       , COMBO_LAYERS  )
-ZMK_COMBO(ralt       , &sk RALT        , 48 38       , COMBO_LAYERS  )
+ZMK_COMBO(rctrl      , &sk RCTRL       , 47 35       , COMBO_LAYERS  )
+ZMK_COMBO(rshift     , &sk RSHFT       , 47 36       , COMBO_LAYERS  )
+ZMK_COMBO(rgui       , &sk RGUI        , 47 37       , COMBO_LAYERS  )
+ZMK_COMBO(ralt       , &sk RALT        , 47 38       , COMBO_LAYERS  )
 
 
 
@@ -85,9 +86,25 @@ ZMK_COMBO(ralt       , &sk RALT        , 48 38       , COMBO_LAYERS  )
            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &trans        &kp R         &kp S         &kp T         &kp H         &kp B                                                                     &kp J         &kp N         &kp E         &kp A         &kp I         &trans
            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┼─────────────┤
-                &trans        &kp X         &kp C         &kp M         &kp P         &kp K         &trans        &trans            &trans        &trans        &kp Z         &kp COMMA     &kp DOT       &kp SQT       &kp SLASH     &trans
+                &trans        &kp X         &kp C         &kp M         &kp P         &kp K         &trans        &trans            &trans        &tog COLEMAK  &kp Z         &kp COMMA     &kp DOT       &kp SQT       &kp SLASH     &trans
            // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                           &trans        &trans        &mo EXT       &kp LSHIFT    &kp TAB           &kp SEMI      &kp SPACE     &mo SYM       &trans        &trans
+           //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        colemak_layer {
+            bindings = <
+           // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                &trans        &kp Q         &kp W         &kp F         &kp P         &kp G                                                                     &kp J         &kp L         &kp U         &kp Y         &kp SEMI      &trans
+           // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                &trans        &kp A         &kp R         &kp S         &kp T         &kp D                                                                     &kp H         &kp N         &kp E         &kp I         &kp O         &trans
+           // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┼─────────────┤
+                &trans        &kp Z         &kp X         &kp C         &kp V         &kp B         &trans        &trans            &trans        &trans        &kp K         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &trans
+           // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                          &trans        &trans        &mo EXT       &kp LSHIFT    &kp TAB           &kp SQT       &kp SPACE     &mo SYM       &trans        &trans
            //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
