@@ -14,7 +14,6 @@
 #define SYM 1
 #define EXT 2
 #define FN 3
-#define PLOVER 4
 
 #define COMBO_TERM 40
 #define COMBO_LAYERS DEFAULT SYM EXT
@@ -52,7 +51,6 @@ ZMK_COMBO(paste      , &kp LC(V)       , 26 27 28    , COMBO_LAYERS  )
 ZMK_COMBO(1password  , &kp LA(X)       , 25 26 27    , COMBO_LAYERS  )
 ZMK_COMBO(audio      , &kp LA(A)       , 30 43       , COMBO_LAYERS  )
 ZMK_COMBO(video      , &kp LA(V)       , 31 44       , COMBO_LAYERS  )
-ZMK_COMBO(plover     , &tog PLOVER     , 30 31 32 33 , DEFAULT PLOVER)
 
 ZMK_COMBO(lalt       , &sk LALT        , 42 25       , COMBO_LAYERS  )
 ZMK_COMBO(lgui       , &sk LGUI        , 42 26       , COMBO_LAYERS  )
@@ -129,7 +127,7 @@ ZMK_COMBO(ralt       , &sk RALT        , 47 38       , COMBO_LAYERS  )
            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &trans        &kp LALT      &kp LGUI      &kp LSHFT     &kp LCTRL     &trans                                                                    &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp BSPC      &trans
            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┼─────────────┤
-                &trans        &sk LALT      &sk LGUI      &sk LSHFT     &sk LCTRL     &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans        &trans        &kp INS       &trans
+                &trans        &sk LALT      &sk LGUI      &sk LSHFT     &sk LCTRL     &trans        &trans        &trans            &trans        &trans        &trans        &kp LS(TAB)   &kp TAB       &trans        &kp INS       &trans
            // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                           &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans
            //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
@@ -148,22 +146,6 @@ ZMK_COMBO(ralt       , &sk RALT        , 47 38       , COMBO_LAYERS  )
                 &trans        &kp LALT      &kp LGUI      &kp LSHFT     &kp LCTRL   &rgb_ug RGB_TOG &bt BT_CLR    &trans            &bt BT_SEL 1  &bt BT_SEL 2  &kp INS       &kp F9        &kp F10       &kp F11       &kp F12       &trans
            // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                           &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans
-           //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        plover_layer {
-            bindings = <
-           // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                &none         &none         &none         &none         &none         &none                                                                     &none         &none         &none         &none         &none         &none      
-           // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                &kp PLV_X1    &kp PLV_SL    &kp PLV_TL    &kp PLV_PL    &kp PLV_HL    &kp PLV_ST                                                                &kp PLV_ST    &kp PLV_FR    &kp PLV_PR    &kp PLV_LR    &kp PLV_TR    &kp PLV_DR
-           // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┬─────────────╮   ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┼─────────────┤
-                &kp PLV_X2    &kp PLV_SL    &kp PLV_KL    &kp PLV_WL    &kp PLV_RL    &kp PLV_ST    &trans        &trans            &trans        &none         &kp PLV_ST    &kp PLV_RR    &kp PLV_BR    &kp PLV_GR    &kp PLV_SR    &kp PLV_ZR
-           // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                          &none         &kp PLV_NM    &kp PLV_A     &kp PLV_O     &none             &none         &kp PLV_E     &kp PLV_U     &kp PLV_NM    &none 
            //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
             >;
 
